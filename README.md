@@ -1,1 +1,2 @@
-# BIS-club-<img width="1062" height="543" alt="Screenshot 2025-09-02 023224" src="https://github.com/user-attachments/assets/512d1a08-7ae4-4c91-91a5-11d7323a7d36" />
+
+![WhatsApp Image 2025-08-29 at 02 55 09_6674ca59](https://github.com/user-attachments/assets/3ca6a8c0-50b8-4fd8-bfe5-636a4b2cf234)
