@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images\bis_icon.jpg" type="image/bis_icon">
+    
+   
+    <link rel="stylesheet"  href="css/styles.css">
+   
+    
+      <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+      <link rel="stylesheet" href="css/alldeviceshoots.css">
+         <link rel="stylesheet" href="css/mobilenav.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1A3636">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta name="description" content="Join BIS 2025, the official orientation program at RAMGARH ENGINEERING COLLEGE, Ramgarh. Explore sessions, schedules, rules, and opportunities to connect with fellow students and faculty.">
+    <meta name="keywords" content="BIS 2025, REC orientation, student welcome program, RAMGARH ENGINEERING COLLEGE, BIS REC, college orientation India, campus event ramgarh , bis rec 2025 , Standard Club , BIS 2025 , orientation program REC, REC 2025 , Standard Club'25">
+    <meta name="author" content="Ramgarh Engineering College BIS Team">
+    <link rel="canonical" href="https://Standard_Club.rec.edu.in">
+    <!-- Open Graph Meta Tags for BIS'25 Homepage -->
+<meta property="og:title" content="Ramgarh Engineering College: BIS'25 Orientation Program">
+<meta property="og:description" content="Explore the highlights, events, and experiences of BIS 2025 – the official orientation program of REC.">
+<meta property="og:image" content="https://bis.rec.edu.in/images/group.webp">
+<meta property="og:url" content="https://bis.rec.edu.in/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ramgarh Engineering College">
+
+    <title>Standard Club</title> 
+</head>
+<style>
+    html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS smoothness */
+}
+
+
+</style>
+<script>
+// Scroll to section if URL has a hash (on page load) ,if not understand later look at D:\my data\SCHOLAR\COMPUTER SCIENCE & Engineering\devlopment\web_dev\web_tech notes
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.hash) {
+    const id = window.location.hash.substring(1);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  initSmoothScrolling();
+  optimizeGLBModels();
+});
+
+// Detect if device is mobile
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);   //work on css file which have not completed fully .
+}
+
+// SMOOTH SCROLL FUNCTION for both desktop & mobile
+function initSmoothScrolling() {
+  const useNative = isMobileDevice(); // Mobile: let browser handle it
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+
+        if (useNative) {
+          // Native smooth scroll (mobile)
+          target.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // Desktop scroll (adjust for fixed navbar)
+          const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+          const targetPosition = target.offsetTop - navbarHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+}
+
+// OPTIMIZE .glb MODEL LOADING
+function optimizeGLBModels() {
+  const glbElements = document.querySelectorAll('model-viewer[src$=".glb"], canvas[src$=".glb"]');
+  glbElements.forEach(viewer => {
+    viewer.setAttribute('preload', 'true');
+    viewer.setAttribute('loading', 'lazy');
+    // Optional: add fallback preview image
+    if (!viewer.hasAttribute('poster')) {
+      viewer.setAttribute('poster', 'images/test_img.jpg'); // replace with your fallback image
+    }
+  });
+}
+</script>
+
+<!--not worked anything-->
+
+
+<body>
+<div class="cursor-object"></div>
+
+
+   <!-- Loading Section -->       <!--animation content not included -->
+    
+    <section class="loading-section" id="loadingSection">
+        <div class="loading-container" id="loadingContainer">
+            <!-- Full Screen Video for Desktop/Tablet -->
+             
+            <video class="loading-video" id="loadingVideo" muted autoplay playsinline lazyload>
+                <source src="./images/BIS'25.mp" type="video/webm">
+                <!-- <source src="./assests/logoanimation.mp4" type="video/mp4"> -->
+                 
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Full Screen Video for Mobile -->            <!--animation content not included for phone-->
+             
+            <video class="loading-video-mobile" id="loadingVideoMobile" muted autoplay playsinline lazyload>
+                <source src="./images/BIS'25.mp4" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+                         
+            <!-- Skip Button -->
+             
+            <button class="skip-button" id="skipButton">Skip</button>
+            <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const skipButton = document.getElementById("skipButton");
+    const loadingSection = document.getElementById("loadingSection");
+
+    if (skipButton) {
+      skipButton.addEventListener("click", function () {
+        // Hide loading screen
+        loadingSection.style.display = "none";
+
+        // Or add a fade-out effect
+        // loadingSection.classList.add("fade-out");
+        // setTimeout(() => loadingSection.style.display = "none", 500);
+      });
+    }
+  });
+</script>
+
+            
+                         
+            <!-- Loading Progress -->     
+             
+            <div class="loading-progress-container" id="progressContainer">
+                <div class="loading-progress-bar">
+                    <div class="loading-progress-fill" id="progressFill"></div>
+                </div>
+                <div class="loading-text">
+                    Loading<span class="loading-percentage" id="loadingPercentage">0%</span>
+                </div>
+            </div>
+        </div>                                                <!--its working  -->
+    </section>  
+
+<div class ="Main-content">
+    
+
+
+    <div class="navbar">
+       
+        <div class="logo">
+            <a href="https://bis.rec.edu.in">
+                <img loading="lazy" src="./images/logo.jpg" alt="Logo" />
+            </a>
+        </div>
+        <div class="logo2">
+            <a href="https://bis.rec.edu.in/index.html#hero-section">
+                <img loading="lazy" src="./images/bis_ico.jpg" alt="" />
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero-section">HOME</a></li>
+            <li><a href="#rules-section">RULES</a></li>
+           <!--<li><a href="#rec-map-thumbnail">SCHEDULE</a></li>-->
+            <li><a  href="#rolling-gallery-container">GALLERY</a></li>
+            <!-- <li><a  href="#speakers-section">SPEAKERS</a></li> -->
+        
+            <li><a  href="#team-section">TEAM</a></li>
+            <li><a style="background-color: #0b148d;text-transform: uppercase; " href="#bis-payment">Registration</a></li>
+
+        </ul>
+    </div>
+
+ 
+  <!-- Mobile Navbar -->
+    <nav class="mobile-navbar">
+        <div class="mobile-logo">
+            <a href="https://bis.rec.edu.in">
+                <img loading="lazy" src="./images/logo.jpg" alt="REC Logo" class="logo-icon">
+            </a>
+        </div>
+        <div class="mobile-logo2">
+            <a href="https://bis.rec.edu.in/index.html#hero-section">
+            <img loading="lazy" src="./images/bis_ico.jp" alt="" class="logo-icon2">
+            </a>
+        </div>
+        
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img loading="lazy" src="./images/rec_logo.png" alt="REC Logo" class="mobile-logo-image">
+            <p>Navigation Menu</p>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero-section">HOME</a></li>
+            <li><a href="#rules-section">RULES</a></li>
+           <!-- <li><a href="#rec-map-thumbnail">SCHEDULE</a></li>-->
+            <li><a href="#rolling-gallery-container">GALLERY</a></li>
+            <!-- <li><a href="#speakers-section">SPEAKERS</a></li> -->
+     
+            <li><a href="team.html">TEAM</a></li>
+            <li><a style="background-color: #D39D55;text-transform: uppercase; " href="#bis-payment">Registration</a></li>
+
+        </ul>
+    </div>
+
+
+<!--till hear   {lines :111 to 219 }-->
+
+                                                     <!--  better woking css till this line-->
+
+    <!-- Hero Section -->
+    <div class="hero-section" id="hero-section">
+
+        <!-- <video autoplay muted loop playsinline class="starting-video">    ( work when update with blockchain for better load distribution ) 
+            <source src="assests/Homevideo/sample_video (1) (1).mp4"  loading="lazy"  type="video/mp4" />
+            Your browser does not support the video tag.
+        </video> -->
+         <img src="./images/group_img_example.png" alt="Group Photo" class="starting-video loaded" loading="lazy" style="opacity: 1; transition: opacity 0.6s ease-in-out;">
+        <div class="overlay"></div>
+
+        <div class="rec-brand">RAMGARH ENGINEERING COLLEGE presents</div>
+        <img src="./images/BIS_logo.png" loading="lazy" alt="BIS Logo" class="logo-image loaded" style="transform: translate(7.05px, -8.60776px); opacity: 1; transition: opacity 0.6s ease-in-out;">
+        <div class="hero-text">
+          
+            <!--             
+            <div class="mentoring-dreams">
+                <span class="mentoring">event</span>
+                <span class="dreams">start</span>
+                </div> -->
+            <!-- <div class="countdown-container">
+            <div class="countdown">                                         //for next event or program
+                <div class="countdown-box">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="countdown-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+        </div> -->
+
+         <div class="date-badge">
+                <i class="far fa-calendar-alt"></i>
+                <span>Sep 12 - sep 23, 2025</span>
+            </div>
+
+            <h3>student orientation program</h3>
+
+            <div class="tagline-container">
+            <p class="tagline">"Standards for Quality Life !"</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- about section -->
+<div class="about-section" id="about-section">
+    <h2>Orientation Program: Standard Club – The Beginning of Your REC Journey</h2>
+    <h4 style="font-size: 25px; font-weight: bolder; color: antiquewhite; padding-bottom: 20px;">Here at REC, your journey of quality and standards begins with BIS — welcome to the family!</h4>
+
+    <p style="font-size: 20px; font-display: fallback; ">The BIS Club Orientation Program is designed to introduce new members to a journey where learning meets leadership, and innovation meets quality. As future engineers, standards are not just rules—they are the foundation of safety, reliability, and excellence.</p>
+
+
+<h5 style="font-size: 20px; color:#f0b970; font-weight: lighter; padding-top: 10px; font-style: italic;">It's not just a program , it's the start of your REC story. </h5>
+  <div class="poster-container">
+            <!-- Replace the src with your actual poster image URL -->
+            <a href="https://drive.google.com/file/d/1rw6CTUAN3ZLmvSVRlx-vLrUjnZF_62O4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+  <img src="images/orientation poster.jpg" alt="BIS Orientation Poster" class="poster-image">
+</a>
+<!--CLEAN-->
+
+            <div class="poster-overlay"></div>
+        </div>
+</div>
+
+
+
+<!-- 3d-model 
+<div class="model-section" id="model-section">
+     <div class="photos">
+    <img loading="lazy" src="images/gallary/WhatsApp Image 2025-06-08 at 08.39.18_58a07b3a.jpg" class="photo rotate-left" alt="Image 1">
+    <img loading="lazy" src="images/gallary/WIN_20250905_14_58_21_Pro.jpg " class="photo rotate-right" alt="Image 2">
+    <img loading="lazy" src="images/gallary/WIN_20250905_14_58_21_Pro.png " class="photo rotate-left" alt="Image 3">
+    <img loading="lazy" src="images/gallary/WIN_20250925_14_40_21_Pro.jpg " class="photo rotate-right" alt="Image 4">
+    <img loading="lazy" src="images/gallary/WIN_20250925_14_42_49_Pro.jpg" class="photo rotate-left" alt="Image 5">
+    <img loading="lazy" src="images/gallary/WIN_20250925_14_42_45_Pro.jpg" class="photo rotate-right" alt="Image 6">
+    <img loading="lazy" src="images/gallary/WIN_20250925_14_40_21_Pro.jpg" class="photo rotate-left" alt="Image 7">
+    <img loading="lazy" src="images/gallary/WIN_20250925_14_42_45_Pro.jpg" class="photo rotate-right" alt="Image 8">
+    <img loading="lazy" src="images/gallary/WIN_20250925_14_42_51_Pro.jpg" class="photo rotate-left" alt="Image 9">
+  </div>
+  
+  
+    <div class="model-viewer-container">
+       
+    <model-viewer 
+        src="images/bis_logo.jpg" 
+        alt="3D model of bislogo " 
+        camera-controls 
+        ar 
+        disable-zoom
+        interaction-prompt="none"
+        touch-action="pan-y"
+        loading="lazy" 
+        style="width: 100%; max-width: 600px; height: 500px;">
+    </model-viewer>
+    </div>
+</div>
+-->
+<!--  @2  -->
+
+
+ <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="event-container">
+            <div class="section-header">
+                <h2>Events & Activities</h2>
+                <div class="event-underline"></div>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-hover-image">
+                        <img loading="lazy" src="images/events/industrial_visit.png" alt="Industrial visit">
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Industrial visit</h3>
+                    <p>Get ready to explore the industry and watch actual work enviroments! Fun with friend groups and talk about better idea and sweet dream.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-hover-image">
+                        <img loading="lazy" src="images/gallary/WIN_20250925_14_42_16_Pro.jpg" alt="youth to youth connect">
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>youth to youth connect </h3>
+                    <p>we also add quality in public by explain about quality product — get inspired, motivated, and ready to boss up your journey.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-hover-image">
+                        <img loading="lazy" src="images/events/standard awarenes.png" alt="Standard awareness">
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Standard awareness</h3>
+                    <p>Engage in interactive sessions led by experts to kickstart your academic journey.
+Learn essential skills and gain insights that set the tone for your future success.
+</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-hover-image">
+                        <img loading="lazy" src="images/events/memes.png" alt="meme competition">
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>MEME competition</h3>
+                    <p>Showcase your unique talents or enjoy captivating performances by fellow students and professionals in a vibrant, unforgettable evening.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-hover-image">
+                        <img loading="lazy" src="images/gallary/WIN_20250925_14_42_16_Pro.jpg" alt="Sports & Games">
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Sports & Games</h3>
+                    <p>Get moving with fun activities and friendly matches that bring out your team spirit and good vibes.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-hover-image">
+                        <img loading="lazy"  src="images/events/pexels-pok-rie-33563-1319750.jpg" alt="Campus Tour">
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Campus Tour</h3>
+                    <p>Explore the heart of our campus with guided tours.
+Discover key landmarks, student hubs, and your new second home.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- explore everyday by reel -->
+    <div class="quality-check">
+        <div class="quality-check-content">
+            <div class="quality-check-text">
+                <span class="sparkle reveal reveal-scale">✨</span>
+                <h3 class="reveal reveal-left">Explore everyday value by reels</h3>
+                <p class="reveal reveal-left reveal-delay-1">Quality solutions that improve efficiency , sustainbility and quality of life</p>
+            </div>
+            <a href="https://www.instagram.com/rec_bis_club/" class="reel-link reveal reveal-right" target="_blank">
+                <div class="reel-preview">
+                    <i class="fab fa-instagram"></i>
+                    <span>Watch on Instagram</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+<!-- Rules Section -->   
+<section class="rules-section" id="rules-section" style="padding-top:96px; margin-top: 30px; padding-bottom: 90px; size: 0cap;">
+   
+        <div class="rules-container">
+            <h2>Rules and Regulations</h2>
+            <p class="rules-intro">
+                All participants must adhere to the following rules during the membership-duration:
+            </p>
+            
+            <ul class="rules-list">
+                <li class="rule-item">
+                    <div class="rule-number">1</div>
+                    <div class="rule-text">
+                      Any action that harms the club's reputation,disrupts its activities, or voilates its policies may result in disciplinaryaction or termination of membership.
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">2</div>
+                    <div class="rule-text">
+                       I understands that voilating these rules may lead to the loss of my core membership.
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">3</div>
+                    <div class="rule-text">
+                       Senior Coordinators have right to take disciplinary action when necessary.
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">4</div>
+                    <div class="rule-text">
+                        Club internal marks will also be affected in case of misconduct. 
+                    </div>
+                </li>
+
+                <li class="rule-item">
+                    <div class="rule-number">5</div>
+                    <div class="rule-text">
+                        In the future,any event-winning prize may be canceled,withheld, or deposited back into the club if rules are voilated. 
+                    </div>
+                </li>
+
+                <li class="rule-item">
+                    <div class="rule-number">6</div>
+                    <div class="rule-text">
+                        Members must maintain discipline and respectful behavior during all club meeting, events , and activities. 
+                    </div>
+                </li>
+
+                <li class="rule-item">
+                    <div class="rule-number">7</div>
+                    <div class="rule-text">
+                        If a student fails to show active participation in club events , their membership will be canceled.
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">8</div>
+                    <div class="rule-text">
+                        Any form of harassment, discrimination, or misconduct will not tolerated.
+                    </div>
+                </li>
+            </ul>
+        </div>
+          <div class="Rules-section-button" >
+            <a href="https://drive.google.com/file/d/1ZYlhBmtHS6bgUEg6MdhIxg4ipDRmEkpj/view?usp=sharing" 
+               class="download-button" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Download the event schedule as PDF">
+                <i class="fas fa-download"></i>
+                <span>Download Rules Book</span>
+            </a>
+        </div>
+    </section>
+
+<div class="Line-divide" style="margin-top: 10px; margin-bottom: 10px;"></div>
+  <!--
+ <section id="schedule" class="schedule">             
+        <div class="container">
+            <div class="section-header">
+                <h1>Event Schedule</h1>                          //0 in future long term event shedule css has also completed 
+                                                                 just remove comment and write schedule ,include pdf from gdrive.
+                <div class="underline"></div>
+            </div>
+            <div class="schedule-tabs">
+                <div class="tab-header">
+                    <div class="tab-btn active" data-day="day1">Day 1</div>
+                    <div class="tab-btn" data-day="day2">Day 2</div>
+                    <div class="tab-btn" data-day="day3">Day 3</div>
+                    <div class="tab-btn" data-day="day4">Day 4</div>
+                    <div class="tab-btn" data-day="day5">Day 5</div>
+                    <div class="tab-btn" data-day="day6">Day 6</div>
+                    <div class="tab-btn" data-day="day7">Day 7</div>
+                    <div class="tab-btn" data-day="day8">Day 8</div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="day1"></div>
+                    <div class="tab-pane" id="day2"></div>
+                    <div class="tab-pane" id="day3"></div>
+                    <div class="tab-pane" id="day4"></div>
+                    <div class="tab-pane" id="day5"></div>
+                    <div class="tab-pane" id="day6"></div>
+                    <div class="tab-pane" id="day7"></div>
+                    <div class="tab-pane" id="day8"></div>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="section-button"><!--replace with   actual event schedules pdf-->
+            <!--
+            <a href="https://drive.google.com/url_______________"  
+               class="download-button" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Download the event schedule as PDF">
+                <i class="fas fa-download"></i>
+                <span>Download Orientation Schedule</span>
+            </a>
+        </div>-->
+        
+    </section>
+
+<!-- map section -->      <!--later you find " sabse bekar img and include" -->
+
+<div class="rec-map-container">
+    <h2>  View of REC&nbsp;Campus</h2> 
+      <a href="https://drive.google.com/file/d/13NeYUKXso8B2GQnG9KaFC5AC0jdhc4Q5/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+  <img src="images/campus_view.png" alt="rec Campus Map" loading="lazy" id="rec-map-thumbnail">
+</a>
+
+  
+ 
+</div>
+
+<!-- Rolling Gallery -->
+<div id="rolling-gallery-container" class="rolling-gallery">
+ <h1>Memories of 2024</h1>
+    <p>Experience the best moments of BIS 2024 with our curated memories. From engaging workshops to inspiring guest lectures, relive the magic that made this event unforgettable!</p>
+
+  <div class="gallery">
+    <div class="column column-scroll-up">
+      <div class="column__wrapper">
+        <div class="column__item"><img src="images/gallary/img_1.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_2.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_3.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_4.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_6.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_7.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_8.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_15.jpg" loading="lazy" alt="Gallery Image"></div>
+      </div>
+    </div>
+    <div class="column column-scroll-down">
+      <div class="column__wrapper">
+        <div class="column__item"><img src="images/gallary/img_7.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_8.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_9.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_10.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/12_img.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_13.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_14 - Copy.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/gallary/img_15.jpg" loading="lazy" alt="Gallery Image"></div>
+      </div>
+    </div>
+    <div class="column column-scroll-up">
+      <div class="column__wrapper">
+        <div class="column__item"><img src="images/gallary/img_15.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/events/pexels-pixabay-358532.jpg" loading="lazy" alt="Gallery Image"></div>
+      </div>
+    </div>
+    <div class="column column-scroll-down">
+      <div class="column__wrapper">
+        <div class="column__item"><img src="images/rec_logo.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+        <div class="column__item"><img src="images/campus_view.png" loading="lazy" alt="Gallery Image"></div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+
+
+
+    <!-- Speakers Section -->       
+       <!--                                                           // thinked but no have time to work on it, i think never start , so skip.
+    <section id="speakers-section" class="speakers-main-section">
+        <div class="speakers-section-header">
+            <h2 class="speakers-reveal speakers-reveal-up">Meet Our Distinguished Facilitators</h2>
+            <div class="speakers-underline"></div>
+        </div>
+        <p class="speakers-section-description speakers-reveal speakers-reveal-up speakers-reveal-delay-1">Meet Our Facilitators who will share their expertise and insights during BIS 2025.</p>
+        
+        <div class="speakers-grid-container">
+             <!-- Speaker 7 -->
+                <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-up speakers-reveal-delay-7">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Manish Freeman .webp" alt="Manish Freeman">
+                </div>
+                <div class="speaker-profile-info">
+                      <h3>
+                     Manish Freeman
+                        <a href="https://www.linkedin.com/in/manish-freeman-a7ab34169/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+                    
+                    
+                    <p class="speaker-bio">Hi, I’m Manish — a joyful mover who turns play and dance into deep connection. Let’s get alive, together, at BIS 2025.</p>
+                </div>
+            </div>
+
+            
+              <!-- Speaker 3 -->
+                 <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-up speakers-reveal-delay-3">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Chetan .webp" alt="Chetan">
+                </div>
+                <div class="speaker-profile-info">
+                    <h3>
+                       Chetan Kanoongo
+                      
+                        </h3>
+                
+                    <p class="speaker-bio">Hi, I’m Chetan — a curious facilitator who creates space for connection, reflection, and play. Let’s explore this new journey together at BIS 2025.</p>
+                </div>
+            </div>
+            <!-- Speaker 1 -->
+               <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-left speakers-reveal-delay-1">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Anjali_Suneja.webp" alt="Anjali Suneja">
+                       
+                </div>
+                <div class="speaker-profile-info">
+                    <h3>
+                        Anjali Suneja
+                        <a href="https://www.linkedin.com/in/anjali-suneja-05021427/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+
+                    
+                   
+                    <p class="speaker-bio">Hi, I’m Anjali — a POSH trainer and HR leader passionate about safe, inclusive spaces. Let’s build a culture of respect and awareness at BIS 2025.</p>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+               <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-up speakers-reveal-delay-2">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Kunal Agarwal .webp" alt="Kunal Agarwal">
+                </div>
+                <div class="speaker-profile-info">
+                    <h3>
+                       Kunal Agarwal
+                        <a href="https://www.linkedin.com/in/kunalagarwal112/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+                   
+                    <p class="speaker-bio">Hi, I’m Kunal — a designer who turns clay and tradition into everyday stories. Let’s shape something meaningful together at BIS 2025.</p>
+                </div>
+            </div>
+
+          
+
+            <!-- Speaker 4 -->
+               <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-right speakers-reveal-delay-4">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Vidhi Modi .webp" alt="Vidhi Modi">
+                </div>
+                <div class="speaker-profile-info">
+                    <h3>
+                     Vidhi Modi
+                        <a href="https://www.linkedin.com/in/vidhimodi99/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+             
+                  
+                    <p class="speaker-bio">Hi, I’m Vidhi — a techie with a heart for well-being and youth empowerment. Let’s begin this chapter with clarity and confidence at BIS 2025.</p>
+                </div>
+            </div>
+
+            <!-- Speaker 5 -->
+               <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-left speakers-reveal-delay-5">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Amit Seth .webp" alt="Amit Seth">
+                </div>
+                <div class="speaker-profile-info">
+                      <h3>
+                     Amit Sheth
+                        </h3>
+                    
+                    <p class="speaker-bio">Hi, I’m Amit — a runner, author, and changemaker who believes in purpose with every step. Let’s walk into BIS 2025 with courage and heart.</p>
+                </div>
+            </div>
+
+            <!-- Speaker 6 -->
+               <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-up speakers-reveal-delay-6">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/Manzil Mystics .webp" alt="Manzil Mystics">
+                </div>
+                <div class="speaker-profile-info">
+                          <h3>
+                    Manzil Mystics
+                        <a href="https://www.linkedin.com/in/anuraghoon/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+                    
+                    
+                 
+                    <p class="speaker-bio">Hi, we’re Manzil Mystics — blending soul, sound, and Kabir’s spirit to spark unity through music. Let’s sing, feel, and celebrate together at BIS 2025.</p>
+                </div>
+            </div>
+
+           
+
+            <!-- Speaker 8 -->
+               <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-right speakers-reveal-delay-8">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/M Pahwa .webp" alt="Manan Pahwa">
+                </div>
+                <div class="speaker-profile-info">
+                     <h3>
+                   Manan Pahwa
+                        <a href="https://www.linkedin.com/in/man/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+
+                    <p class="speaker-bio">Hi, I’m Manan — a curious mind who blends design, behavior, and deep research to decode human decisions. Let’s uncover the “why” behind what we do at BIS 2025.</p>
+                </div>
+            </div>
+
+           <!-- Speaker 8 -->
+              <!--
+            <div class="speaker-profile-card speakers-reveal speakers-reveal-right speakers-reveal-delay-8">
+                <div class="speaker-profile-image">
+                    <img loading="lazy" src="assests/Images/Speakers/houdhary.webp" alt="Manan Pahwa">
+                </div>
+                <div class="speaker-profile-info">
+                         <h3>
+                   Mukesh Choudhary
+                        <a href="https://www.linkedin.com/in/choudhary/" target="_blank" class="linkedin-icon-name" style="
+                            margin-left: 8px;
+                            color: #D39D55;
+                            display: inline-flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1rem;
+                        ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zM4.943 12.306V6.169H2.542v6.137h2.401zm-1.2-7.01c.837 0 1.351-.554 1.351-1.248-.015-.708-.514-1.248-1.336-1.248-.822 0-1.35.54-1.35 1.248 0 .694.513 1.248 1.32 1.248h.015zm4.908 7.01h2.4V9.359c0-.157.012-.314.058-.427.128-.314.42-.639.911-.639.643 0 .9.482.9 1.189v2.824h2.4V9.237c0-1.538-.82-2.254-1.911-2.254-.884 0-1.28.492-1.5.839h.022v-.722H8.651c.03.47 0 6.137 0 6.137z"/>
+                            </svg>
+                        </a>
+                        </h3>
+
+                    
+                    <p class="speaker-bio">Hi, I’m Choudhary — Cyber Crime Consultant and InfoSec professional, helping India’s law enforcement and intelligence agencies stay sharp for over a decade. From CBI to the armed forces, I’ve trained and advised the best. At BIS 2025, let’s decode the world of cyber security together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+
+    <!-- Team Section  -->
+      <div class="team-section" id="team-section">
+        <div class="team-section-header">
+            <h2 class="team-section-title">Meet Our Team</h2>
+            <p class="team-section-subtitle">
+                Our dedicated professionals bring expertise, passion, and innovation to every project. 
+                Get to know the talented individuals who make our success possible.
+            </p>
+        </div>
+        
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download (1).jpg" alt="Rohit Singh is the Pro president  REC_BIS, with over 2 years of experience in Standard Club. He has held key leadership roles, is an active member of professional bodies. He vision drives innovation, research, and student-focused learning at REC.">
+                </div>
+                <div class="member-info-team">
+                    <h3 class="member-name">Rohit Singh</h3>
+                    <p>President</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download (2).jpg" alt="Ms. SWETA brings strong leadership experience from the pharmaceutical industry to his role as Head of Student Affairs at REC. He focuses on student engagement, smooth operations, and building a vibrant campus community. Known for driving growth and team transformation, he helps create a supportive environment that enhances the REC experience.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">Sweta Sogani</h3>
+                <p>Head - Student Affairs</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download (3).jpg" alt="As Executive of Student Affairs, Anushka brings energy, empathy, and strong communication skills to enhance student engagement. A true people person, she loves meeting new people, hearing their stories, and learning from them. Her passion for growth and community-building makes her a key part of campus life.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">Gahendra purohit</h3>
+                <p>Executive - Student Affairs</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download (3).jpg" alt="As Executive of Student Affairs, Anushka brings energy, empathy, and strong communication skills to enhance student engagement. A true people person, she loves meeting new people, hearing their stories, and learning from them. Her passion for growth and community-building makes her a key part of campus life.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">Gahendra purohit</h3>
+                <p>Executive - Student Affairs</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download (3).jpg" alt="As Executive of Student Affairs, Anushka brings energy, empathy, and strong communication skills to enhance student engagement. A true people person, she loves meeting new people, hearing their stories, and learning from them. Her passion for growth and community-building makes her a key part of campus life.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">Gahendra purohit</h3>
+                <p>Executive - Student Affairs</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download (3).jpg" alt="As Executive of Student Affairs, Anushka brings energy, empathy, and strong communication skills to enhance student engagement. A true people person, she loves meeting new people, hearing their stories, and learning from them. Her passion for growth and community-building makes her a key part of campus life.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">Gahendra purohit</h3>
+                <p>Executive - Student Affairs</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download.jpg" alt="Vaibhav Topiwala is the Sports and Outreach Officer at REC, mentoring and motivating students to reach their potential. A skilled communicator and certified career counsellor, he inspires young minds and builds vibrant communities both on and off the field.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">unidentify</h3>
+                <p>Sports Officer - Student Affairs</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download.jpg" alt="Vaibhav Topiwala is the Sports and Outreach Officer at REC, mentoring and motivating students to reach their potential. A skilled communicator and certified career counsellor, he inspires young minds and builds vibrant communities both on and off the field.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">unidentify</h3>
+                <p>Sports Officer - Student Affairs</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/download.jpg" alt="Vaibhav Topiwala is the Sports and Outreach Officer at REC, mentoring and motivating students to reach their potential. A skilled communicator and certified career counsellor, he inspires young minds and builds vibrant communities both on and off the field.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">unidentify</h3>
+                <p>Sports Officer - Student Affairs</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- OC -->
+             <div class="team-grid">
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/images (1).jpg" alt=" Dr. Alka Mahajan is the Pro Vice Chancellor of REC, with over 30 years of experience in higher education. She has held key leadership roles, is an active member of professional bodies, and is a certified ABET evaluator. Her vision drives innovation, research, and student-focused learning at REC.">
+                </div>
+                <div class="member-info-team">
+                    <h3 class="member-name">Ananya Purohit</h3>
+                    <p>Organizing Head</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/images (2).jpg" alt="Mr. Deepak Sogani brings strong leadership experience from the pharmaceutical industry to his role as Head of Student Affairs at REC. He focuses on student engagement, smooth operations, and building a vibrant campus community. Known for driving growth and team transformation, he helps create a supportive environment that enhances the REC experience.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">Girl Saraswat</h3>
+                <p>Organizing Head</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-image">
+                    <img src="images/our team/images (3).jpg" alt="As Executive of Student Affairs, Anushka brings energy, empathy, and strong communication skills to enhance student engagement. A true people person, she loves meeting new people, hearing their stories, and learning from them. Her passion for growth and community-building makes her a key part of campus life.">
+                </div>
+                <div class="member-info-team">
+                <h3 class="member-name">good man Sharma</h3>
+                <p>Organizing Head</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="view-team-section">
+            <a href="team.html" class="view-team-btn">
+                <span>View Complete Team</span>
+                <span class="btn-icon">→</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+ <div class="surprise-section">
+        <div class="particles-container" id="particles"><div class="particle" style="width: 3.98105px; height: 3.98105px; left: 49.2039%; animation-delay: 3.31233s; animation-duration: 6.6533s;"></div><div class="particle star" style="width: 4.74339px; height: 4.74339px; left: 44.3986%; animation-delay: 2.67197s; animation-duration: 6.12512s;"></div><div class="particle" style="width: 5.6449px; height: 5.6449px; left: 45.1072%; animation-delay: 0.994527s; animation-duration: 4.77715s;"></div><div class="particle" style="width: 2.65507px; height: 2.65507px; left: 36.3672%; animation-delay: 3.27333s; animation-duration: 7.73845s;"></div><div class="particle" style="width: 5.31291px; height: 5.31291px; left: 0.316952%; animation-delay: 4.30881s; animation-duration: 6.63225s;"></div><div class="particle star" style="width: 3.23528px; height: 3.23528px; left: 55.9564%; animation-delay: 0.829853s; animation-duration: 4.86801s;"></div><div class="particle" style="width: 3.55189px; height: 3.55189px; left: 38.9404%; animation-delay: 2.70938s; animation-duration: 5.46363s;"></div><div class="particle" style="width: 2.7532px; height: 2.7532px; left: 92.864%; animation-delay: 5.42832s; animation-duration: 7.18364s;"></div><div class="particle" style="width: 3.53867px; height: 3.53867px; left: 92.8152%; animation-delay: 2.03157s; animation-duration: 4.94594s;"></div><div class="particle" style="width: 4.82314px; height: 4.82314px; left: 34.0362%; animation-delay: 3.15273s; animation-duration: 4.34739s;"></div><div class="particle star" style="width: 5.00532px; height: 5.00532px; left: 74.8851%; animation-delay: 1.98765s; animation-duration: 5.14671s;"></div><div class="particle star" style="width: 5.02153px; height: 5.02153px; left: 74.5824%; animation-delay: 3.13725s; animation-duration: 4.01748s;"></div><div class="particle star" style="width: 2.58547px; height: 2.58547px; left: 26.6452%; animation-delay: 4.46199s; animation-duration: 7.07417s;"></div><div class="particle" style="width: 4.30821px; height: 4.30821px; left: 89.1755%; animation-delay: 2.11372s; animation-duration: 6.26072s;"></div><div class="particle" style="width: 4.8261px; height: 4.8261px; left: 2.72449%; animation-delay: 3.74052s; animation-duration: 4.14938s;"></div><div class="particle" style="width: 2.95805px; height: 2.95805px; left: 23.6233%; animation-delay: 0.602268s; animation-duration: 4.60958s;"></div><div class="particle" style="width: 5.82476px; height: 5.82476px; left: 0.757103%; animation-delay: 5.70675s; animation-duration: 4.63912s;"></div><div class="particle" style="width: 4.36079px; height: 4.36079px; left: 45.3933%; animation-delay: 0.302144s; animation-duration: 7.35968s;"></div><div class="particle" style="width: 5.73166px; height: 5.73166px; left: 81.8542%; animation-delay: 4.11698s; animation-duration: 5.47778s;"></div><div class="particle" style="width: 5.89382px; height: 5.89382px; left: 96.7644%; animation-delay: 1.6878s; animation-duration: 6.14767s;"></div><div class="particle star" style="width: 5.60815px; height: 5.60815px; left: 3.97679%; animation-delay: 4.94209s; animation-duration: 4.66779s;"></div><div class="particle" style="width: 5.08781px; height: 5.08781px; left: 49.7438%; animation-delay: 4.33172s; animation-duration: 6.91148s;"></div><div class="particle" style="width: 2.92293px; height: 2.92293px; left: 20.7638%; animation-delay: 3.903s; animation-duration: 6.01665s;"></div><div class="particle" style="width: 5.9309px; height: 5.9309px; left: 33.9455%; animation-delay: 2.42695s; animation-duration: 6.70481s;"></div><div class="particle" style="width: 2.88502px; height: 2.88502px; left: 37.1872%; animation-delay: 1.05532s; animation-duration: 5.66511s;"></div><div class="particle star" style="width: 5.13156px; height: 5.13156px; left: 89.804%; animation-delay: 2.44664s; animation-duration: 5.54172s;"></div><div class="particle" style="width: 5.45691px; height: 5.45691px; left: 96.5652%; animation-delay: 1.65106s; animation-duration: 5.86647s;"></div><div class="particle" style="width: 2.22883px; height: 2.22883px; left: 83.104%; animation-delay: 2.49158s; animation-duration: 4.39787s;"></div><div class="particle star" style="width: 4.20779px; height: 4.20779px; left: 2.20194%; animation-delay: 3.39123s; animation-duration: 4.70468s;"></div><div class="particle" style="width: 5.27915px; height: 5.27915px; left: 86.9957%; animation-delay: 0.452356s; animation-duration: 6.41202s;"></div><div class="particle star" style="width: 2.40312px; height: 2.40312px; left: 56.0453%; animation-delay: 5.5578s; animation-duration: 5.45956s;"></div><div class="particle" style="width: 3.05213px; height: 3.05213px; left: 54.5678%; animation-delay: 3.62517s; animation-duration: 4.69406s;"></div><div class="particle" style="width: 4.35053px; height: 4.35053px; left: 14.9963%; animation-delay: 2.70078s; animation-duration: 4.19642s;"></div><div class="particle" style="width: 3.63277px; height: 3.63277px; left: 63.7571%; animation-delay: 2.29131s; animation-duration: 7.75579s;"></div><div class="particle" style="width: 3.29901px; height: 3.29901px; left: 24.76%; animation-delay: 0.816043s; animation-duration: 4.63759s;"></div><div class="particle star" style="width: 4.32867px; height: 4.32867px; left: 20.0196%; animation-delay: 4.79408s; animation-duration: 6.80273s;"></div><div class="particle" style="width: 2.65476px; height: 2.65476px; left: 17.9679%; animation-delay: 4.05994s; animation-duration: 7.83407s;"></div><div class="particle star" style="width: 5.7132px; height: 5.7132px; left: 15.6285%; animation-delay: 3.126s; animation-duration: 7.905s;"></div><div class="particle" style="width: 5.13615px; height: 5.13615px; left: 13.172%; animation-delay: 5.4747s; animation-duration: 7.86416s;"></div><div class="particle star" style="width: 5.56406px; height: 5.56406px; left: 50.94%; animation-delay: 0.525498s; animation-duration: 4.10659s;"></div><div class="particle" style="width: 4.55181px; height: 4.55181px; left: 56.8522%; animation-delay: 2.41683s; animation-duration: 6.53985s;"></div><div class="particle" style="width: 5.55719px; height: 5.55719px; left: 38.7166%; animation-delay: 4.95498s; animation-duration: 6.11764s;"></div><div class="particle star" style="width: 5.74984px; height: 5.74984px; left: 17.103%; animation-delay: 5.46351s; animation-duration: 4.36135s;"></div><div class="particle" style="width: 2.67688px; height: 2.67688px; left: 83.0439%; animation-delay: 0.869342s; animation-duration: 6.36365s;"></div><div class="particle star" style="width: 4.29143px; height: 4.29143px; left: 52.1421%; animation-delay: 4.11359s; animation-duration: 5.41938s;"></div><div class="particle star" style="width: 3.98902px; height: 3.98902px; left: 6.94227%; animation-delay: 0.422361s; animation-duration: 7.59674s;"></div><div class="particle" style="width: 2.71501px; height: 2.71501px; left: 48.1856%; animation-delay: 2.90461s; animation-duration: 6.81113s;"></div><div class="particle" style="width: 3.18063px; height: 3.18063px; left: 58.1614%; animation-delay: 2.03578s; animation-duration: 5.71245s;"></div><div class="particle" style="width: 2.14022px; height: 2.14022px; left: 71.7973%; animation-delay: 5.81663s; animation-duration: 4.6365s;"></div><div class="particle star" style="width: 3.48999px; height: 3.48999px; left: 6.0911%; animation-delay: 5.74716s; animation-duration: 4.19583s;"></div></div>
+        
+        <div class="decorative-elements">
+            <div class="gem" style="top: 20%; left: 15%;"></div>
+            <div class="gem" style="top: 30%; right: 20%;"></div>
+            <div class="gem" style="bottom: 25%; left: 25%;"></div>
+            <div class="gem" style="bottom: 35%; right: 15%;"></div>
+        </div>
+
+        <div class="title-container">
+            <h1 class="surprise-title">Something Special Awaits</h1>
+            <p class="subtitle">A mystery locked away, waiting to be revealed...</p>
+        </div>
+
+        <div class="lock-container" id="lockContainer">
+            <div class="lock-glow"></div>
+            
+            <svg class="lock-svg" width="250" height="250" viewBox="0 0 250 250" xmlns="http://www3.org/2000/svg">
+                <!-- Lock Body Shadow -->
+                <ellipse cx="127" cy="182" rx="85" ry="75" fill="rgba(0,0,0,0.3)" opacity="0.5"></ellipse>
+                
+                <!-- Lock Body Base -->
+                <rect x="45" y="110" width="160" height="140" rx="25" ry="25" fill="url(#lockGradient)"></rect>
+                
+                <!-- Lock Body Highlight -->
+                <rect x="50" y="115" width="150" height="130" rx="20" ry="20" fill="url(#lockHighlight)" opacity="0.3"></rect>
+                
+                <!-- Lock Shackle -->
+                <path d="M 80 110 Q 80 40 125 40 Q 170 40 170 110" stroke="url(#shackleGradient)" stroke-width="16" fill="none" stroke-linecap="round"></path>
+                
+                <!-- Inner Shackle -->
+                <path d="M 90 110 Q 90 55 125 55 Q 160 55 160 110" stroke="url(#innerShackle)" stroke-width="8" fill="none" stroke-linecap="round"></path>
+
+                <!-- Keyhole -->
+                <circle cx="125" cy="170" r="18" fill="url(#keyholeGradient)"></circle>
+                <rect x="118" y="178" width="14" height="25" rx="7" fill="url(#keyholeGradient)"></rect>
+                
+                <!-- Keyhole Inner Shadow -->
+                <circle cx="125" cy="170" r="12" fill="var(--primary-100)" opacity="0.8"></circle>
+                <rect x="121" y="175" width="8" height="20" rx="4" fill="var(--primary-100)" opacity="0.8"></rect>
+
+                <!-- Decorative Elements -->
+                <circle cx="125" cy="140" r="3" fill="var(--secondary-base)" opacity="0.7"></circle>
+                <circle cx="125" cy="210" r="3" fill="var(--secondary-base)" opacity="0.7"></circle>
+                <circle cx="85" cy="175" r="2" fill="var(--secondary-base)" opacity="0.5"></circle>
+                <circle cx="165" cy="175" r="2" fill="var(--secondary-base)" opacity="0.5"></circle>
+
+                <!-- Gradients -->
+                <defs>
+                    <linearGradient id="lockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--primary-60);stop-opacity:1"></stop>
+                        <stop offset="50%" style="stop-color:var(--primary-base);stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:var(--primary-80);stop-opacity:1"></stop>
+                    </linearGradient>
+                    <linearGradient id="lockHighlight" x1="0%" y1="0%" x2="100%" y2="50%">
+                        <stop offset="0%" style="stop-color:var(--secondary-30);stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:transparent;stop-opacity:0"></stop>
+                    </linearGradient>
+                    <linearGradient id="shackleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--secondary-50);stop-opacity:1"></stop>
+                        <stop offset="50%" style="stop-color:var(--secondary-base);stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:var(--secondary-70);stop-opacity:1"></stop>
+                    </linearGradient>
+                    <linearGradient id="innerShackle" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--secondary-30);stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:var(--secondary-60);stop-opacity:1"></stop>
+                    </linearGradient>
+                    <radialGradient id="keyholeGradient" cx="50%" cy="30%" r="70%">
+                        <stop offset="0%" style="stop-color:var(--primary-90);stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:var(--primary-100);stop-opacity:1"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+
+            <!-- Key Animation -->
+            <div class="key-animation" id="keyAnimation">
+                <svg width="60" height="30" viewBox="0 0 60 30" xmlns="http://www3.org/2000/svg">
+                    <rect x="5" y="12" width="35" height="6" rx="3" fill="var(--secondary-base)"></rect>
+                    <circle cx="45" cy="15" r="10" fill="none" stroke="var(--secondary-base)" stroke-width="3"></circle>
+                    <rect x="50" y="10" width="3" height="5" fill="var(--secondary-base)"></rect>
+                    <rect x="50" y="17" width="3" height="3" fill="var(--secondary-base)"></rect>
+                </svg>
+            </div>
+        </div>
+
+        <div class="message-container show" id="messageContainer">
+            <div class="unlock-message">This Will Unlock During</div>
+            <div class="bis-text">BIS '25</div>
+        </div>
+    </div>
+
+    
+
+<!-- FAQ Section -->
+<div class="faq-sections" id="faq-sections">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <p>Find answers to common questions about BIS 2025.</p>
+
+
+<!-- Tab Content Containers -->
+<div id="faq" class="faq-tab-content active">
+    <div class="search-box" >
+            <input type="text" class="search-input" id="searchInput" placeholder="Search for questions, topics, or keywords..." >
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <script>
+function toggleFaq(element) {
+    const faqItem = element.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const toggleIcon = element.querySelector('.faq-toggle');
+
+    // Toggle visibility
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        toggleIcon.textContent = '+';
+    } else {
+        answer.style.display = 'block';
+        toggleIcon.textContent = '−';
+    }
+}
+</script>
+
+<div class="faq-section">
+        <div class="faq-category">
+        <h3>🎯 Orientation Week</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What happens during BIS 2025 orientation week?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Orientation includes campus tours, academic advising sessions, social activities and Yoga, information sessions about resources and services, club and organization fairs, welcome ceremony, technology setup assistance, and sessions on college life skills and safety.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Is attendance mandatory for all orientation activities?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>While most activities are highly recommended, some sessions like academic advising and safety briefings are mandatory. Social activities are optional but strongly encouraged as they help you meet fellow students and build connections that will enhance your college experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-category">
+        <h3>🏠 Campus Life & Facilities</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What facilities are available on campus?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The campus offers a wide range of facilities to support student life and learning, including well-equipped libraries, computer labs with high-speed internet, sports complexes, student hostels, and dining halls. Common rooms within the hostels offer spaces for relaxation and socializing, equipped with indoor activities like table tennis and more to keep students engaged. Additionally, there are counseling services and event venues to enhance the overall campus experience.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do I get around campus?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The campus is designed to be student-friendly and walkable, with clear signage and pathways connecting all major buildings. Most academic blocks, hostels, dining areas, and recreational spaces are within easy walking distance, making it convenient to get around.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What are the campus safety measures?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The campus is equipped with 24/7 security through trained personnel, CCTV surveillance, and controlled entry/exit points. Hostel wardens and the Student Affairs team are available for support. Emergency protocols are in place, including medical aid and evacuation plans. The campus prioritizes student safety with a zero-tolerance policy for harassment or misconduct.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What kind of fun and recreational activities are available on campus?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The campus offers a wide range of fun and recreational activities, including cultural nights, open mics, sports tournaments, movie screenings, festivals, and club events. Fun sessions are organized frequently to help students unwind, connect, and showcase their talents. From indoor games like table tennis and carrom in common rooms to interest-based clubs and casual hangouts, there's always something exciting happening to keep the campus lively and engaging!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-category">
+        <h3>🏠 Accommodation & Housing</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What types of accommodation are available?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We offer  housing options  Triple shared rooms, apartment-style housing for first Years. All rooms come with basic furniture, internet access, and utilities included. Some buildings offer air conditioning and premium amenities.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What are the hostel rules and regulations?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Newly admitted students must be inside the hostel premises by 06:30 PM; hostel gates will be closed at 01:00 AM sharp. Team BIS members must return to their rooms by 8:00 AM, unless they have explicit permission to stay out later from the Head - Student Affairs.
+Attendance must be given during the dinner break.
+
+⚠️ Important:
+Smoking, consumption of alcohol, and use of any narcotic substances are strictly prohibited anywhere on the campus of REC, including hostels and outdoor areas.
+
+Electrical appliances such as irons, straighteners, etc., are not allowed inside hostel rooms. However, students can use the common facilities provided in the common room, which include a fridge, microwave, stove, and iron for everyone's convenience.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do laundry facilities work?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>There is one laundromat on campus that operates through a dedicated mobile app. You can book machines, check availability, and get notified when your laundry is done. Please note that each wash requires payment through the app.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Hostel timings for BIS 2025</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <ul>
+                    <li>Newly admitted students must be inside hostels by 11:30 PM; hostel gates will be closed at 12:00 AM.</li>
+                    <li>Team Aarambh members must be back in their rooms by 1:00 AM, unless required to stay out later by the Head - Student Affairs.</li>
+                    <li>Attendance to be given during dinner break</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-category">
+        <h3>🍽️ Dining & Meal Plans</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What dining options are available on campus?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We have multiple dining halls offering four meals daily: breakfast, lunch, evening snacks, and dinner. Vegetarian meals are included, while non-vegetarian options are available separately on a paid basis and kept separate from vegetarian food. Vending machines are placed throughout campus, and the cafeteria is open with delivery services available for hostels.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do meal plans work?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Students can choose from various meal plans ranging from 10 meals per week to unlimited access. Meals are accessed using your student ID card, and unused meals can sometimes roll over. Flex dollars can be used at campus eateries and convenience stores.</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+</div>
+
+<!-- Checklist -->                 <!--copy form rajsthan university but not usefull-->
+ <!--
+<div id="checklist" class="checklist">
+    <h2>Essential Packing Checklist</h2> 
+    <p>Use this checklist to ensure you have everything you need for a smooth start to your College life.</p>
+    
+    <div class="checklist-section">
+        <div class="packing-checklist-header">
+          <h3>📦 What to Pack - Essential Checklist</h3>
+          <a href="https://drive.google.com/file/d/1chgMe6hIkNLbMXN8wOKhxu26sp=sharing" 
+             class="packing-download-btn" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Download the BIS-25 Essential Packing Checklist as PDF">
+            📥 Download PDF
+          </a>
+        </div>
+        <div class="packing-progress-bar">         
+            <div class="packing-progress-fill" id="packingProgressFill"></div>     
+        </div>     
+        
+        <div class="packing-progress-text" id="packingProgressText">0% Complete (0/0 items checked)</div>
+            <div class="checklist-category">
+                <h4>👕 Clothing & Personal Items</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Casual wear (t-shirts, jeans, shorts)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Formal wear (shirts, trousers, dress)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Seasonal clothing (jackets, sweaters)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Undergarments and socks
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Sleepwear and loungewear
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Footwear (sneakers, sandals, formal shoes)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Personal hygiene items
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Towels and washcloths
+                    </div>
+                </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>📖 Academic Essentials</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Laptop/computer
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Notebooks and Writing Pads
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Pens, pencils, and highlighters
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Calculator (scientific)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Laptop Bag
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Document Folder
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>🏠 Room & Living Essentials</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Bed sheets, pillow and pillow cover
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Blankets and Comforter
+                    </div>
+                    <div class="checklist-item">
+                        <input style="font-weight: bolder;" type="checkbox" onchange="updateProgress()"> Umbrella (Important)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Pillow
+                    </div> -->
+                    <!--
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Desk lamp
+                    </div>
+                   
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Laundry basket and detergent
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Hangers for clothes
+            </div>
+                </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>🍽️ Kitchen & Food Items</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Water bottle
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Coffee/tea mug
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Basic utensils (for induction stove)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Plates and Bowls
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Non-perishable snacks
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Food storage containers
+                    </div>
+                </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>🆔 Important Documents</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Admission letter and documents
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Academic transcripts
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Government-issued IDs
+                    </div>
+                    <!-- <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Health insurance cards
+                    </div> -->
+                      <!--
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Bank account information
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Emergency contact information
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Passport photos
+                    </div>
+                    <!-- <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Medical records and prescriptions
+                    </div> -->
+      <!--            </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>💊 Health & Wellness</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> First aid kit
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Prescription medications
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Vitamins and supplements
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Thermometer
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Hand sanitizer
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Face masks
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Sunscreen and personal care items
+                    </div>
+                    <!-- <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Contact lenses/glasses (if needed)
+                    </div> -->      <!--
+                </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>🔌 Electronics & Tech</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Power Bank
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Extension cord
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Headphones or earbuds
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Speakers (small, respectful volume)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Tablet or e-reader
+                    </div>
+                </div>
+            </div>
+        
+            <div class="checklist-category">
+                <h4>🎨 Personal & Recreation</h4>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Books for leisure reading
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Board games or playing cards
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Sports equipment (if applicable)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Musical instruments (if you play)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Art supplies (if you're creative)
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Photos and personal mementos
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" onchange="updateProgress()"> Stress ball or fidget items
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>-->
+        
+       <!-- Payment Section -->  
+    <section id="bis-payment">
+        <div class="content-wrapper">
+            <h2>🎉 BIS 2025 Registration</h2>
+            
+            <p class="fee-title">
+                Kickstart your REC journey with a one-time registration fee of <span class="price">₹200</span> (Non-refundable) covering all essentials for a vibrant and welcoming orientation experience.
+            </p>
+
+            <div class="includes-section">
+                <div class="includes-title"> What the Fee Includes:</div>
+                <ul>
+                    <li>🛌 <strong>Non-AC Shared Accommodation:</strong> Comfortable stay in campus hostels throughout the orientation program.</li>
+                    <li>🍽️ <strong>All Meals:</strong> Mess food provided from the day of registration until the conclusion of BIS.</li>
+                    <li>🎁 <strong>BIS Kit:</strong> Includes official merchandise (T-shirts, ID card, and more).</li>
+                    <li>🎭 <strong>Full Access:</strong> Entry to all workshops, creative sessions, team-building events, and outdoor group activities.</li>
+
+                </ul>
+            </div>
+<div class="ac-note">
+    <strong>AC rooms are optional and subject to availability.</strong> These will be allotted on a first-come-first-served basis and charged separately at the time of check-in.<br>
+    <strong>Note:</strong> ₹150 will increase during online payment due to Cashfree charges. This is a payment gateway charge collected by Cashfree; the college will receive only ₹150.
+</div>
+
+
+            <div class="instructions-section">
+                <div class="instructions-title">
+                     Important Instructions
+                </div>
+                
+                <div class="instruction-item">
+                    Please enter the <strong>student's full name accurately</strong> during registration, even if the payment is made by a parent or guardian.
+                </div>
+                
+                <div class="instruction-item">
+                    This registration is <strong>strictly for admitted students of REC Batch 2025</strong>. Kindly avoid sharing the link outside the eligible group.
+                </div>
+                
+                <div class="instruction-item">
+                    During payment, mention your <strong>REC Application Number</strong> in the "Notes" section to ensure proper identification and confirmation.
+                </div>
+              
+
+
+            </div>
+            <div style="text-align: center;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQTw_Nhx0wPe5zOxCIsNZR0KTIBgLt_nU0N1NhJ3_wQ9XhCA/viewform" target="_blank">
+                <img src="images/QR.png" alt="BIS 2025 Registration Fee" 
+                    class="fee-image" 
+                    style="width: 100%; max-width: 300px; display: inline-block;">
+            </a>
+            </div>
+
+            
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQTw_Nhx0wPe5zOxCIsNZR0KTIBgLt_nU0N1NhJ3_wQ9XhCA/viewform" target="_blank">
+                <button class="styled-button">
+                    Register Now
+                    <div class="inner-button">
+                        <svg
+                            id="Arrow"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/200/svg"
+                            height="30px"
+                            width="30px"
+                            class="icon"
+                        >
+                            <defs>
+                                <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="iconGradient">
+                                    <stop style="stop-color:#FFFFFF;stop-opacity:1" offset="0%"></stop>
+                                    <stop style="stop-color:#AAAAAA;stop-opacity:1" offset="100%"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path
+                                fill="url(#iconGradient)"
+                                d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"
+                            ></path>
+                        </svg>
+                    </div>
+                </button>
+            </a>
+        </div>
+    </section>
+
+
+
+
+ <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Ramgarh Engineering College, murubandha,Ramgarh, Jharkhand 825101</p>
+                <p></p>
+                <p></p>
+                <p><i class="fas fa-phone"></i> +91 141 7107500</p>
+                <p><i class="fas fa-envelope"></i> info@rec.edu.in</p>
+            </div>
+            
+            <div class="footer-section">
+                <div class="quick-link">
+                <h3>Quick Links</h3>
+               
+                <ul>
+                    <li><a href="index.html#about-section">About</a></li>
+                    <li><a href="index.html#schedule">Schedule</a></li>
+                    <!--<li><a href="speaker.html">Speakers</a></li>-->
+                    <li><a href="https://www.rec.edu.in" target="_blank">College Website</a></li>
+                     <li><a href="privacy.html">Privacy Policy</a></li>
+                      <li><a href="terms.html"> Terms & Conditions</a></li>
+                       <li><a href="refund.html">Refund & Cancellation Policy</a></li>
+                       <li><a href="contectus.html">Contact Us</a></li>
+                </ul>
+                 </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/rec.edu.in" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/rec" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/rec_bis_club?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/rec-standard-club/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section footer-image-section">
+                <div class="footer-image">
+                    <img src="images/campus_view.png" alt="REC Campus" loading="lazy">
+                </div>
+            </div>
+
+            <div class="map-section-full">
+                <h3>Location</h3>
+                <div class="map-container-full">
+                    <iframe
+                        src="https://www.google.com/maps/place/Ramgarh+Engineering+College/@23.5782902,85.6273985,865m/data=!3m1!1e3!4m14!1m7!3m6!1s0x39f458e93cb14f4f:0xb22c7b3b8ffb020f!2sRamgarh+Engineering+College!8m2!3d23.5782853!4d85.6299734!16s%2Fg%2F1q628ps9s!3m5!1s0x39f458e93cb14f4f:0xb22c7b3b8ffb020f!8m2!3d23.5782853!4d85.6299734!16s%2Fg%2F1q628ps9s?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                        width="100%" 
+                        height="250" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credits"  style=" padding-top: 5px ; padding-bottom: 10px;">
+          <p>
+  <a style="color:#F0DEC6; text-decoration: none; padding-top: 0px ; padding-bottom: 10px;" href="team.html#section-heading-website-coordinators">
+    Designed and Developed by:<br>BIS Team {2023-2027}
+  </a>
+</p>
+
+       </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>© 2025 BIS - Ramgarh Engineering College. All rights reserved.</p>
+                <div class="footer-logo">
+                    <img loading="lazy" src="images/bis_icon.jpg" alt="BIS Logo" class="footer-logo-img">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="/frontend/js/app.js"></script>
+    <script src="/frontend//js/animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/examples/js/loaders/GLTFLoader.js"></script>
+
+</body>
+
+</html>
