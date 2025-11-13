@@ -26,10 +26,9 @@ pub async fn upload_image(
 
         if field_name == "file" {
             // Extract filename
-            if let Some(content_disposition) = field.content_disposition() {
-                if let Some(filename) = content_disposition.get_filename() {
-                    file_name = filename.to_string();
-                }
+            let content_disposition = field.content_disposition();
+            if let Some(filename) = content_disposition.get_filename() {
+                file_name = filename.to_string();
             }
 
             // Get content type
@@ -132,7 +131,7 @@ pub async fn get_image(
             log::info!("✅ Image retrieved: ID {}", image_id);
             Ok(HttpResponse::Ok()
                 .content_type(&image.content_type)
-                .insert_header(("Content-Disposition", format!("inline; filename=\"{}\"", image.image_name)))
+                .insert_header(("Content-Disposition".to_string(), format!("inline; filename=\"{}\"", image.image_name)))
                 .body(image.image_data))
         }
         Err(sqlx::Error::RowNotFound) => {

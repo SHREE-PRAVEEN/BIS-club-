@@ -14,6 +14,7 @@ pub struct Image {
     pub description: Option<String>,
     pub uploaded_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
+    pub(crate) im: (),
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
